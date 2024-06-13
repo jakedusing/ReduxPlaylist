@@ -11,6 +11,9 @@ const moviesSlice = createSlice({
       const index = state.indexOf(action.payload);
       state.splice(index, 1);
     },
+    reset(state, action) {
+      return [];
+    },
   },
 });
 
@@ -44,4 +47,4 @@ const store = configureStore({
 
 export { store };
 export const { addSong, removeSong } = songsSlice.actions;
-export const { addMovie, removeMovie } = moviesSlice.actions;
+export const { addMovie, removeMovie, reset } = moviesSlice.actions;
